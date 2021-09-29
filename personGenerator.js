@@ -1,5 +1,4 @@
 
-
 const personGenerator = {
     surnameJson: `{  
         "count": 15,
@@ -142,7 +141,7 @@ const personGenerator = {
 
 
     randomYear: function () {
-        return this.randomIntNumber(max = 2000, min = 1940);
+        return this.randomIntNumber(max = 2000, min = 1940) + ' года рождения';
     },
     randomDay: function () {
         let MofB;
@@ -153,12 +152,12 @@ const personGenerator = {
         } else {
             MofB = this.randomIntNumber(max = 31, min = 1);
         }
-        return MofB;
+        return ', ' + MofB;
     },
     randomGender: function () {
         let G;
-        this.randomIntNumber(max = 1, min = 0) < .5 ? G = personGenerator.GENDER_MALE : G = personGenerator.GENDER_FEMALE;
-        return G;
+        this.randomIntNumber(max = 1, min = 0) < .5 ? G = personGenerator.GENDER_MALE  : G = personGenerator.GENDER_FEMALE ;
+        return  G ;
     },
     randomMonth: function () {
         return this.randomValue(this.MonthJson);
@@ -168,9 +167,9 @@ const personGenerator = {
         if (this.person.Gender == 'Женщина') {
             firstN = this.randomValue(this.firstNameFemaleJson);
         } else if (this.person.Gender == 'Мужчина') {
-            firstN = this.randomValue(this.firstNameMaleJson);
+            firstN =  this.randomValue(this.firstNameMaleJson);
         }
-        return firstN;
+        return  firstN ;
 
     },
     randomLastName: function () {
@@ -212,22 +211,6 @@ const personGenerator = {
         this.person.Job = this.randomJob();
         this.person.DayOfBirth = this.randomDay();
         this.person.MonthOfBirth = this.randomMonth();
-
         return this.person;
     },
 };
-document.getElementById('create') = btnCreate;
-btnCreate.addEventListener("click", personGenerator.getPerson);
-document.getElementById('clean') = btnClean;
-btnClean.addEventListener('click', function () {
-    this.person = {};
-    return this.person;
-})
-
-document.getElementById('create') = btnCreate;
-btnCreate.addEventListener("click", personGenerator.getPerson);
-document.getElementById('clean') = btnClean;
-btnClean.addEventListener('click', function () {
-    this.person = {};
-    return this.person;
-})

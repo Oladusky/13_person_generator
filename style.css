@@ -1,0 +1,39 @@
+body {
+    background-image: url(bcgrd.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    
+}
+
+.container {
+    margin-top: 20vh;
+    border-radius: 20%;
+}
+
+.card-body {
+    background: linear-gradient(to top left, powderblue, pink);
+}
+
+.card-header {
+    background: pink;
+    border: 1px solid rgb(181, 55, 164);
+
+}
+
+#create_btn,
+#clean_btn {
+    border-color: white;
+    cursor: pointer;
+    border: 1px solid powderblue;
+    outline: none;
+    border-radius: 5px;
+}
+
+#create_btn:hover,
+#clean_btn:hover {
+    transition: 1s ease-in-out;
+    background: rgb(203, 96, 167);
+}
