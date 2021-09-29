@@ -1,9 +1,8 @@
-window.onload = function()
-{
+window.onload = function () {
     generateNewPerson();
 };
- function generateNewPerson()
-{
+
+function generateNewPerson() {
     const initPerson = personGenerator.getPerson();
     document.getElementById('firstNameOutput').innerText = initPerson.firstName;
     document.getElementById('surnameOutput').innerText = initPerson.Surname;
@@ -15,11 +14,10 @@ window.onload = function()
     document.getElementById('JobOutput').innerText = initPerson.Job;
 
 
-    
+
 };
 
-function cleanPerson()
-{
+function cleanPerson() {
     document.getElementById('firstNameOutput').innerText = "";
     document.getElementById('surnameOutput').innerText = "";
     document.getElementById('genderOutput').innerText = "";
@@ -30,7 +28,7 @@ function cleanPerson()
     document.getElementById('JobOutput').innerText = "";
 
 
-    
+
 };
 document.getElementById('create_btn').addEventListener('click', function () {
     generateNewPerson();
@@ -38,6 +36,3 @@ document.getElementById('create_btn').addEventListener('click', function () {
 document.getElementById('clean_btn').addEventListener('click', function () {
     cleanPerson();
 });
-
-
-

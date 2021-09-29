@@ -1,4 +1,3 @@
-
 const personGenerator = {
     surnameJson: `{  
         "count": 15,
@@ -156,8 +155,8 @@ const personGenerator = {
     },
     randomGender: function () {
         let G;
-        this.randomIntNumber(max = 1, min = 0) < .5 ? G = personGenerator.GENDER_MALE  : G = personGenerator.GENDER_FEMALE ;
-        return  G ;
+        this.randomIntNumber(max = 1, min = 0) < .5 ? G = personGenerator.GENDER_MALE : G = personGenerator.GENDER_FEMALE;
+        return G;
     },
     randomMonth: function () {
         return this.randomValue(this.MonthJson);
@@ -167,9 +166,9 @@ const personGenerator = {
         if (this.person.Gender == 'Женщина') {
             firstN = this.randomValue(this.firstNameFemaleJson);
         } else if (this.person.Gender == 'Мужчина') {
-            firstN =  this.randomValue(this.firstNameMaleJson);
+            firstN = this.randomValue(this.firstNameMaleJson);
         }
-        return  firstN ;
+        return firstN;
 
     },
     randomLastName: function () {
